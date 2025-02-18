@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Task 6</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <form action="#" method="POST">
+        <div class="form-group">
+          <label for="name">Name:</label>
+          <input
+            type="text"
+            class="form-control"
+            id="name"
+            name="name"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            class="form-control"
+            id="email"
+            name="email"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            class="form-control"
+            id="password"
+            name="password"
+            required
+          />
+        </div>
+
+        <div class="form-group">
+          <label for="hobbies">Hobbies:</label>
+          <select class="form-control" id="hobbies" name="hobbies" required>
+            <option value="" disabled selected>Select your hobby</option>
+            <option value="reading">Reading</option>
+            <option value="sports">Sports</option>
+            <option value="music">Music</option>
+            <option value="traveling">Traveling</option>
+            <option value="coding">Coding</option>
+            <option value="painting">Painting</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-danger btn-lg btn-block">
+          Submit
+        </button>
+      </form>
+    </div>
+  </body>
+</html>

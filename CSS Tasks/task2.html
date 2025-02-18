@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Task 2</title>
+    <style>
+      body {
+        margin: 0;
+      }
+
+      /* Vertical Navbar */
+      .first {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 20%;
+        background-color: #f1f1f1;
+        text-align: center;
+        height: 30%;
+        overflow: auto;
+      }
+
+      .first a {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+
+      .first a.active1 {
+        background-color: orange;
+        color: white;
+      }
+
+      .first a:hover:not(.active1) {
+        background-color: #555;
+        color: white;
+      }
+
+      /* Horizontal Navbar */
+      .second {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: rgb(150, 150, 150);
+        width: 41%;
+      }
+
+      .second li {
+        float: left;
+      }
+
+      .second a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+
+      .second a:hover:not(.active) {
+        background-color: #111;
+      }
+
+      .second a.active {
+        background-color: rgb(100, 100, 100);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Vertical Nav Bar</h1>
+    <ul class="first">
+      <li><a class="active1" href="#home">Home</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">Bootstrap</a></li>
+    </ul>
+
+    <h1>Horizontal Nav Bar</h1>
+    <ul class="second">
+      <li><a class="active" href="#home">Home</a></li>
+      <li><a href="#">Java</a></li>
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+    </ul>
+  </body>
+</html>

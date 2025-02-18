@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bootstrap Task 3</title>
+  </head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f8f9fa;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+    }
+    .header {
+      background-color: white;
+      padding: 15px;
+      border-bottom: 1px solid #e5e5e5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .header nav a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: black;
+    }
+    .pricing-header {
+      text-align: center;
+      margin: 40px 0;
+    }
+    .card-deck {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      flex: 1;
+      padding: 20px;
+      text-align: center;
+    }
+    .card h4 {
+      margin-bottom: 15px;
+    }
+    .card ul {
+      list-style: none;
+      padding: 0;
+    }
+    .card button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 10px;
+      cursor: pointer;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 40px;
+      padding: 20px;
+      border-top: 1px solid #e5e5e5;
+    }
+  </style>
+  <body>
+    <div class="header">
+      <h5>Company Name</h5>
+      <nav>
+        <a href="#">Features</a>
+        <a href="#">Enterprise</a>
+        <a href="#">Support</a>
+        <a href="#">Pricing</a>
+      </nav>
+      <button>Sign Up</button>
+    </div>
+
+    <div class="pricing-header">
+      <h1>Pricing</h1>
+      <p>Choose the best plan for your needs.</p>
+    </div>
+
+    <div class="container">
+      <div class="card-deck">
+        <div class="card">
+          <h4>Free</h4>
+          <h1>$0/mo</h1>
+          <ul>
+            <li>10 users</li>
+            <li>2GB storage</li>
+            <li>Email support</li>
+          </ul>
+          <button>Sign up</button>
+        </div>
+        <div class="card">
+          <h4>Pro</h4>
+          <h1>$15/mo</h1>
+          <ul>
+            <li>20 users</li>
+            <li>10GB storage</li>
+            <li>Priority support</li>
+          </ul>
+          <button>Get Started</button>
+        </div>
+        <div class="card">
+          <h4>Enterprise</h4>
+          <h1>$29/mo</h1>
+          <ul>
+            <li>30 users</li>
+            <li>15GB storage</li>
+            <li>Phone support</li>
+          </ul>
+          <button>Contact Us</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2025 Company Name. All rights reserved.</p>
+    </div>
+  </body>
+</html>
