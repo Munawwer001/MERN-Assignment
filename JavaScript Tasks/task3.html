@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 3</title>
+  </head>
+  <body>
+    <label>1st Number :</label>
+    <input type="number" id="num1" /><br /><br />
+
+    <label>2nd Number :</label>
+    <input type="number" id="num2" /><br /><br />
+
+    <button onclick="calculate('multiply')">Multiply</button>
+    <button onclick="calculate('divide')">Divide</button>
+
+    <h1>The Result Is :</h1>
+    <h2 id="result"></h2>
+
+    <script>
+      function calculate(operation) {
+        let num1 = parseFloat(document.getElementById("num1").value);
+        let num2 = parseFloat(document.getElementById("num2").value);
+        let result = 0;
+
+        if (operation === "multiply") {
+          result = num1 * num2;
+        } else if (operation === "divide") {
+          if (num2 !== 0) {
+            result = num1 / num2;
+          } else {
+            result = "Cannot divide by zero";
+          }
+        }
+
+        document.getElementById("result").innerText = result;
+      }
+    </script>
+  </body>
+</html>

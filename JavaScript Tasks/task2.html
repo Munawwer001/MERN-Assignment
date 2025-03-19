@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 2</title>
+  </head>
+  <body>
+    <h1>Sort Letters Alphabetically</h1>
+    <input
+      type="text"
+      id="stringInput"
+      placeholder="Enter a string"
+    /><br /><br />
+    <button onclick="sortString()">Generate</button>
+    <h3>Sorted String: <span id="result"></span></h3>
+
+    <script>
+      function sortString() {
+        let str1 = document.getElementById("stringInput").value;
+        let str = str1.toLowerCase();
+        let sortedStr = str.split("").sort().join("");
+        document.getElementById("result").innerText = sortedStr;
+      }
+    </script>
+  </body>
+</html>
