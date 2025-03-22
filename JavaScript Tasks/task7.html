@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 7</title>
+    <style>
+      body {
+        text-align: center;
+        font-family: Arial, sans-serif;
+      }
+      .container {
+        position: relative;
+        width: 600px;
+        height: 200px;
+        margin: auto;
+        overflow: hidden;
+        border: 2px solid black;
+      }
+      .train {
+        position: absolute;
+        left: 0;
+        top: 50px;
+        width: 150px;
+      }
+      h2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <img src="train.jpg" class="train" id="train" />
+    </div>
+    <h2>Click the following buttons to handle animation</h2>
+    <button onclick="startAnimation()">Start</button>
+    <button onclick="stopAnimation()">Stop</button>
+
+    <script>
+      let train = document.getElementById("train");
+      let position = 0;
+      let animation;
+
+      function startAnimation() {
+        clearInterval(animation);
+        animation = setInterval(() => {
+          if (position >= 450) {
+            position = 0;
+          }
+          position += 5;
+          train.style.left = position + "px";
+        }, 50);
+      }
+
+      function stopAnimation() {
+        clearInterval(animation);
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 6</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+      }
+      .login-container {
+        background: white;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        width: 300px;
+      }
+      h2 {
+        font-family: cursive;
+        margin-bottom: 20px;
+      }
+      .input-group {
+        display: flex;
+        align-items: center;
+        background: #f0f0f0;
+        padding: 8px;
+        border-radius: 5px;
+        margin-bottom: 15px;
+      }
+      .input-group input {
+        border: none;
+        background: transparent;
+        width: 100%;
+        padding: 5px;
+        outline: none;
+      }
+      .input-group i {
+        margin-right: 10px;
+        color: #555;
+      }
+      .login-btn {
+        background: #007bff;
+        color: white;
+        padding: 10px;
+        width: 100%;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      .login-btn:hover {
+        background: #0056b3;
+      }
+      .options {
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        font-size: 14px;
+      }
+      .options a {
+        text-decoration: none;
+        color: #007bff;
+      }
+      .signup {
+        margin-top: 10px;
+        font-size: 14px;
+      }
+      .signup a {
+        text-decoration: none;
+        color: #007bff;
+      }
+    </style>
+    <script
+      src="https://kit.fontawesome.com/a076d05399.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="login-container">
+      <h2>Instagram</h2>
+      <div class="input-group">
+        <i class="fas fa-user"></i>
+        <input type="text" placeholder="Username" />
+      </div>
+      <div class="input-group">
+        <i class="fas fa-lock"></i>
+        <input type="password" placeholder="Password" />
+      </div>
+      <button class="login-btn">Log in</button>
+      <div class="options">
+        <label><input type="checkbox" /> Remember me</label>
+        <a href="#">Forgot Password?</a>
+      </div>
+      <div class="signup">
+        Don't have an account? <a href="#">Sign up here.</a>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Task 5</title>
+  </head>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .error {
+      color: red;
+      font-size: 14px;
+    }
+    input,
+    textarea {
+      border: 2px solid #ccc;
+      padding: 5px;
+    }
+    input.error-border,
+    textarea.error-border {
+      border: 2px solid red;
+    }
+  </style>
+
+  <body>
+    <form id="myForm" onsubmit="return validateForm()">
+      <label>Name:</label>
+      <input type="text" id="name" />
+      <span class="error" id="nameError"></span>
+      <br /><br />
+
+      <label>Email:</label>
+      <input type="text" id="email" />
+      <span class="error" id="emailError"></span>
+      <br /><br />
+
+      <label>Website:</label>
+      <input type="text" id="website" />
+      <span class="error" id="websiteError"></span>
+      <br /><br />
+
+      <label>Message:</label>
+      <textarea id="message"></textarea>
+      <span class="error" id="messageError"></span>
+      <br /><br />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      function validateForm() {
+        let isValid = true;
+
+        let name = document.getElementById("name").value;
+        let email = document.getElementById("email").value;
+        let website = document.getElementById("website").value;
+        let message = document.getElementById("message").value;
+
+        document.getElementById("nameError").innerHTML = "";
+        document.getElementById("emailError").innerHTML = "";
+        document.getElementById("websiteError").innerHTML = "";
+        document.getElementById("messageError").innerHTML = "";
+
+        document.getElementById("name").classList.remove("error-border");
+        document.getElementById("email").classList.remove("error-border");
+        document.getElementById("website").classList.remove("error-border");
+        document.getElementById("message").classList.remove("error-border");
+
+        if (name.trim() === "") {
+          document.getElementById("nameError").innerHTML =
+            "This field is required";
+          document.getElementById("name").classList.add("error-border");
+          isValid = false;
+        }
+
+        let emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!email.match(emailPattern)) {
+          document.getElementById("emailError").innerHTML =
+            "A valid email address is required";
+          document.getElementById("email").classList.add("error-border");
+          isValid = false;
+        }
+
+        let urlPattern =
+          /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})([\/\w .-]*)*\/?$/;
+        if (!website.match(urlPattern)) {
+          document.getElementById("websiteError").innerHTML =
+            "A valid url is required";
+          document.getElementById("website").classList.add("error-border");
+          isValid = false;
+        }
+
+        if (message.trim() === "") {
+          document.getElementById("messageError").innerHTML =
+            "This field is required";
+          document.getElementById("message").classList.add("error-border");
+          isValid = false;
+        }
+
+        return isValid;
+      }
+    </script>
+  </body>
+</html>
